@@ -4,219 +4,395 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Undangan Wisuda Sai Rahmat</title>
+
+<title>Undangan Wisuda - Sai Rahmat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Georgia, serif;
-  background: #f8f2e8;
-  color: #59452c;
+    font-family: 'Poppins', sans-serif;
+    background: #faf6ef;
+    color: #514536;
+    text-align: center;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    background:
+    linear-gradient(rgba(30,25,20,.55),rgba(30,25,20,.55)),
+    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600')
+    center/cover no-repeat;
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.small-title {
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 8vw, 75px);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 2;
+    font-size: 14px;
+}
+
+.open-button {
+    margin-top: 30px;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 30px;
+    background: #c7a66b;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s;
+}
+
+.open-button:hover {
+    background: #a47c42;
+    transform: translateY(-3px);
 }
 
 section {
-  min-height: 100vh;
-  padding: 70px 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    padding: 75px 20px;
 }
 
-.cover {
-  background: linear-gradient(145deg, #f8f0df, #e8d5ad);
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #a47c42;
+    margin-bottom: 20px;
 }
 
-.small {
-  letter-spacing: 5px;
-  font-size: 12px;
-  margin-bottom: 25px;
+.description {
+    max-width: 650px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 2;
 }
 
-h1 {
-  font-size: clamp(38px, 8vw, 65px);
-  color: #9b7135;
-  margin: 20px 0;
+.gold-line {
+    width: 80px;
+    height: 2px;
+    background: #c7a66b;
+    margin: 25px auto;
 }
 
-h2 {
-  font-size: 34px;
-  color: #9b7135;
-  margin-bottom: 25px;
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 7vw, 58px);
+    color: #a47c42;
+    margin: 25px 0;
 }
 
-p {
-  line-height: 1.9;
-  max-width: 600px;
+.event {
+    background: #eee5d7;
 }
 
-button, .btn {
-  background: #a77d3e;
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-top: 28px;
-  cursor: pointer;
-  font-size: 14px;
+.event-card {
+    max-width: 550px;
+    margin: 30px auto 0;
+    padding: 35px 20px;
+    background: #fffdf9;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.06);
 }
 
-button:hover, .btn:hover {
-  background: #795729;
+.event-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #a47c42;
+    margin-bottom: 20px;
 }
 
-.photo-main {
-  width: min(290px, 85vw);
-  height: 370px;
-  object-fit: cover;
-  border: 8px solid white;
-  box-shadow: 0 8px 30px #9d805055;
-  border-radius: 150px 150px 15px 15px;
-  margin: 25px 0;
-}
-
-.details {
-  background: #eee1c9;
+.event-card p {
+    font-size: 14px;
+    line-height: 2.2;
+    margin-bottom: 15px;
 }
 
 .gallery {
-  background: #faf6ef;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 850px;
+    margin: 35px auto;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  width: min(650px, 100%);
-  margin-top: 30px;
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #e5dccd;
 }
 
-.gallery-grid img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border: 5px solid white;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px #8b744133;
+.gallery img:last-child {
+    grid-column: 1 / -1;
 }
 
-.gallery-grid img:first-child {
-  grid-column: span 2;
-  height: 330px;
-}
-
-.card {
-  background: #fffaf1;
-  padding: 30px;
-  border: 1px solid #d6bd8d;
-  border-radius: 15px;
-  width: min(500px, 100%);
-  margin-top: 20px;
-}
-
-.closing {
-  background: linear-gradient(145deg, #e8d5ad, #f8f0df);
+.thanks {
+    background: #eee5d7;
 }
 
 footer {
-  padding: 20px;
-  text-align: center;
-  background: #8f6b39;
-  color: white;
-  font-size: 12px;
+    padding: 30px 15px;
+    background: #45392d;
+    color: white;
+    font-size: 12px;
+    line-height: 2;
 }
 
-@media(max-width: 480px) {
-  .gallery-grid img {
-    height: 190px;
-  }
-  .gallery-grid img:first-child {
-    height: 260px;
-  }
+/* TOMBOL MUSIK */
+
+.music-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #a47c42;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 12px #0003;
+    display: none;
+}
+
+@media(max-width: 600px) {
+    section {
+        padding: 55px 18px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 280px;
+    }
+
+    .gallery img:last-child {
+        grid-column: auto;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<section class="cover" id="top">
-  <p class="small">THE GRADUATION CELEBRATION</p>
-  <p>Dengan penuh rasa syukur,</p>
-  <h1>Graduation</h1>
-  <p>Undangan Perayaan Wisuda</p>
-  <h2>Sai Rahmat</h2>
-  <p>Sabtu, 28 November 2026</p>
-  <a href="#sambutan" class="btn">Buka Undangan ✨</a>
+<!-- MUSIK LATAR -->
+<audio id="backgroundMusic" loop preload="auto">
+    <source src="musik-wisuda.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HALAMAN PEMBUKA -->
+<header class="hero" id="home">
+    <div class="hero-content">
+
+        <p class="small-title">YOU ARE INVITED</p>
+
+        <h1>Graduation Celebration</h1>
+
+        <div class="gold-line"></div>
+
+        <p>
+            Dengan penuh rasa syukur dan bahagia,
+            kami mengundang Anda untuk hadir
+            dalam acara wisuda kami.
+        </p>
+
+        <button class="open-button" onclick="openInvitation()">
+            ✉ Buka Undangan
+        </button>
+
+    </div>
+</header>
+
+<!-- UCAPAN -->
+<section id="undangan">
+
+    <p class="description">
+        Dengan memohon rahmat dan karunia Allah SWT,
+        merupakan suatu kebahagiaan bagi kami
+        apabila Bapak/Ibu/Saudara/i berkenan hadir
+        dalam momen istimewa ini.
+    </p>
+
+    <div class="gold-line"></div>
+
+    <h2 class="name">Sai Rahmat</h2>
+
+    <p class="description">
+        Graduation Day 2026
+    </p>
+
 </section>
 
-<section id="sambutan">
-  <p class="small">A SPECIAL MOMENT</p>
-  <h2>Alhamdulillah</h2>
-  <p>
-    Dengan penuh rasa syukur kepada Allah SWT,
-    kami mengundang keluarga dan sahabat untuk
-    turut merayakan momen istimewa kelulusan.
-  </p>
-  <img class="photo-main" src="gambar%201.JPEG" alt="Foto Sai Rahmat">
-  <h2>Sai Rahmat</h2>
-  <p>Satu perjalanan telah selesai, perjalanan baru akan dimulai.</p>
-  <a href="#acara" class="btn">Lihat Detail Acara</a>
+<!-- DETAIL ACARA -->
+<section class="event">
+
+    <h2 class="section-title">Detail Acara</h2>
+
+    <p class="description">
+        Dengan penuh kebahagiaan, kami mengundang
+        Anda untuk menjadi bagian dari hari istimewa ini.
+    </p>
+
+    <div class="event-card">
+
+        <h3>Graduation Day</h3>
+
+        <div class="gold-line"></div>
+
+        <p>
+            <strong>Hari / Tanggal</strong><br>
+            Sabtu, 28 November 2026
+        </p>
+
+        <p>
+            <strong>Waktu</strong><br>
+            10.00 WIB - Selesai
+        </p>
+
+        <p>
+            <strong>Acara</strong><br>
+            Graduation Celebration 2026
+        </p>
+
+    </div>
+
 </section>
 
-<section class="details" id="acara">
-  <p class="small">SAVE THE DATE</p>
-  <h2>Detail Acara</h2>
-  <div class="card">
-    <p>🎓</p>
-    <h2>Wisuda</h2>
-    <p>Sabtu, 28 November 2026</p>
-    <p>Universitas Muhammadiyah Jakarta</p>
-    <p>Waktu: 10.00 WIB – Selesai</p>
-  </div>
-  <a href="#galeri" class="btn">Lihat Galeri Foto</a>
+<!-- GALERI FOTO -->
+<section>
+
+    <h2 class="section-title">Our Memories</h2>
+
+    <p class="description">
+        Setiap perjalanan memiliki cerita,
+        dan setiap pencapaian memiliki kenangan.
+        Inilah beberapa momen berharga yang ingin kami bagikan.
+    </p>
+
+    <div class="gallery">
+
+        <img src="gambar%201.jpeg" alt="Foto Wisuda 1">
+
+        <img src="gambar%202.jpeg" alt="Foto Wisuda 2">
+
+        <img src="gambar%203.jpeg" alt="Foto Wisuda 3">
+
+        <img src="gambar%204.jpeg" alt="Foto Wisuda 4">
+
+        <img src="gambar%205.jpeg" alt="Foto Wisuda 5">
+
+    </div>
+
 </section>
 
-<section class="gallery" id="galeri">
-  <p class="small">MEMORIES & MOMENTS</p>
-  <h2>Galeri Foto</h2>
-  <p>Beberapa momen istimewa dalam perjalanan ini.</p>
+<!-- PENUTUP -->
+<section class="thanks">
 
-  <div class="gallery-grid">
-    <img src="gambar%201.JPEG" alt="Foto 1">
-    <img src="gambar%202.JPEG" alt="Foto 2">
-    <img src="gambar%203.JPEG" alt="Foto 3">
-    <img src="gambar%204.JPEG" alt="Foto 4">
-    <img src="gambar%205.JPEG" alt="Foto 5">
-  </div>
+    <h2 class="section-title">Thank You</h2>
 
-  <a href="#penutup" class="btn">Lanjut</a>
-</section>
+    <p class="description">
+        Merupakan suatu kehormatan dan kebahagiaan
+        bagi kami apabila Anda berkenan hadir
+        serta memberikan doa dan restu.
+    </p>
 
-<section class="closing" id="penutup">
-  <p class="small">THANK YOU</p>
-  <h2>Terima Kasih</h2>
-  <p>
-    Terima kasih atas doa, dukungan, dan kasih sayang
-    yang telah diberikan.
-    Semoga kebahagiaan ini menjadi awal dari
-    perjalanan yang lebih baik.
-  </p>
-  <h1>Sai Rahmat</h1>
-  <p>See you at the celebration!</p>
-  <a href="#top" class="btn">Kembali ke Atas ↑</a>
+    <div class="gold-line"></div>
+
+    <h2 class="name">Sai Rahmat</h2>
+
+    <p>Graduation Day 2026</p>
+
 </section>
 
 <footer>
-  © 2026 Graduation Invitation — Sai Rahmat
+
+    <p>Made with Love</p>
+    <p>Graduation Celebration 2026</p>
+
 </footer>
+
+<!-- TOMBOL MUSIK -->
+<button class="music-button" id="musicButton"
+        onclick="toggleMusic()">
+    🔇 Matikan Musik
+</button>
+
+<script>
+
+const music = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("musicButton");
+
+async function openInvitation() {
+
+    try {
+        await music.play();
+        musicButton.style.display = "block";
+        musicButton.innerHTML = "🔇 Matikan Musik";
+    } catch (error) {
+        musicButton.style.display = "block";
+        musicButton.innerHTML = "🎵 Putar Musik";
+    }
+
+    document.getElementById("undangan").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+async function toggleMusic() {
+
+    if (music.paused) {
+
+        try {
+            await music.play();
+            musicButton.innerHTML = "🔇 Matikan Musik";
+        } catch (error) {
+            musicButton.innerHTML = "🎵 Coba Putar Lagi";
+        }
+
+    } else {
+
+        music.pause();
+        musicButton.innerHTML = "🎵 Putar Musik";
+
+    }
+}
+
+</script>
 
 </body>
 </html>
