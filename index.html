@@ -138,6 +138,23 @@ section {
     margin-bottom: 15px;
 }
 
+.location-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: #a47c42;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.location-button:hover {
+    background: #806034;
+    transform: translateY(-3px);
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -169,8 +186,6 @@ footer {
     font-size: 12px;
     line-height: 2;
 }
-
-/* TOMBOL MUSIK */
 
 .music-button {
     position: fixed;
@@ -285,6 +300,23 @@ footer {
         </p>
 
         <p>
+            <strong>Lokasi</strong><br>
+            Universitas Muhammadiyah Jakarta<br>
+            Jl. K.H. Ahmad Dahlan, Cirendeu,<br>
+            Ciputat, Tangerang Selatan
+        </p>
+
+        <a
+        href="https://www.google.com/maps/search/?api=1&query=Universitas+Muhammadiyah+Jakarta"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="location-button">
+            📍 Lihat Lokasi di Google Maps
+        </a>
+
+        <div class="gold-line"></div>
+
+        <p>
             <strong>Acara</strong><br>
             Graduation Celebration 2026
         </p>
@@ -307,9 +339,13 @@ footer {
     <div class="gallery">
 
         <img src="gambar%201.jpeg" alt="Foto Wisuda 1">
+
         <img src="gambar%202.jpeg" alt="Foto Wisuda 2">
+
         <img src="gambar%203.jpeg" alt="Foto Wisuda 3">
+
         <img src="gambar%204.jpeg" alt="Foto Wisuda 4">
+
         <img src="gambar%205.jpeg" alt="Foto Wisuda 5">
 
     </div>
@@ -335,10 +371,12 @@ footer {
 
 </section>
 
+<!-- FOOTER -->
 <footer>
 
     <p>Made with Love</p>
     <p>Graduation Celebration 2026</p>
+    <p>Sai Rahmat, S.P.</p>
 
 </footer>
 
